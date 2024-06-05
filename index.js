@@ -10,13 +10,13 @@ function getComputerChoice() {
   switch (number) {
     case 0:
       console.log(`Computer chose: rock`);
-      break;
+      return "rock";
     case 1:
       console.log(`Computer chose: paper`);
-      break;
+      return "paper";
     case 2:
       console.log(`Computer chose: scissors`);
-      break;
+      return "scissors";
   }
 }
 
@@ -33,6 +33,7 @@ function playGame() {
   const playRound = (humanChoice, computerChoice) => {
     if (humanChoice === computerChoice) {
       console.log(`Draw: ${humanChoice} is equal to ${computerChoice}`);
+      console.log("-");
       return;
     } else if (
       (humanChoice == "rock" && computerChoice == "paper") ||
@@ -40,9 +41,11 @@ function playGame() {
       (humanChoice == "scissors" && computerChoice == "rock")
     ) {
       console.log(`Computer wins: ${computerChoice} beats ${humanChoice}`);
+      console.log("-");
       return ++computerScore;
     } else {
       console.log(`You win: ${humanChoice} beats ${computerChoice}`);
+      console.log("-");
       return ++humanScore;
     }
   };
@@ -55,7 +58,7 @@ playGame();
 playGame();
 playGame();
 
-if ((humanScore = computerScore)) {
+if (humanScore === computerScore) {
   console.log(`Draw! ${humanScore} - ${computerScore}`);
 } else if (humanScore > computerScore) {
   console.log(`You win! ${humanScore} - ${computerScore}`);
