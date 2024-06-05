@@ -7,15 +7,19 @@ let computerScore = 0;
 
 function getComputerChoice() {
   let number = Math.floor(Math.random() * 3);
-  if (number === 0) {
-    console.log(`Computer chose: rock`);
-    return "rock";
-  } else if (number === 1) {
-    console.log(`Computer chose: paper`);
-    return "paper";
-  } else {
-    console.log(`Computer chose: scissors`);
-    return "scissors";
+  switch (number) {
+    case 0:
+      console.log(`Computer chose: rock`);
+      return "rock";
+      break;
+    case 1:
+      console.log(`Computer chose: paper`);
+      return "paper";
+      break;
+    case 2:
+      console.log(`Computer chose: scissors`);
+      return "scissors";
+      break;
   }
 }
 
