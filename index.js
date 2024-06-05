@@ -35,6 +35,7 @@ function playGame() {
       console.log(`Draw: ${humanChoice} is equal to ${computerChoice}`);
       console.log("-");
       return;
+      g;
     } else if (
       (humanChoice == "rock" && computerChoice == "paper") ||
       (humanChoice == "paper" && computerChoice == "scissors") ||
@@ -59,6 +60,7 @@ playGame();
 playGame();
 
 if (humanScore === computerScore) {
+  // fixed
   console.log(`Draw! ${humanScore} - ${computerScore}`);
 } else if (humanScore > computerScore) {
   console.log(`You win! ${humanScore} - ${computerScore}`);
