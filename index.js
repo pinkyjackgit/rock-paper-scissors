@@ -10,15 +10,12 @@ function getComputerChoice() {
   switch (number) {
     case 0:
       console.log(`Computer chose: rock`);
-      return "rock";
       break;
     case 1:
       console.log(`Computer chose: paper`);
-      return "paper";
       break;
     case 2:
       console.log(`Computer chose: scissors`);
-      return "scissors";
       break;
   }
 }
